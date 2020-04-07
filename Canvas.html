@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+      <title>Canvas</title>
+  </head>
+      
+<body>
+      <canvas id="square" class="square" width="400" height="400"></canvas>
+<!--       <canvas class="square" width="200" height="200"></canvas>
+      <canvas class="wide-rectangle" width="200" height="200"></canvas>
+      <canvas class="tall-rectangle" width="200" height="200"></canvas> -->
+
+
+    <script>
+      let square = document.getElementById('square');
+      let ctx = square.getContext('2d');
+
+      // contorno para visualizar la cuadricula.
+/*       ctx.strokeRect(0, 0, 400, 400) */
+
+      ctx.fillStyle = "rgb(200,0,0)";
+      // Izquierda
+      ctx.fillRect( 50, 79, 80, 80);
+      // Arriba
+      ctx.fillRect( 130, 00, 80, 80);
+      // Derecha
+      ctx.fillRect( 210, 79, 180, 80);
+      // Abajo
+      ctx.fillRect( 130, 159, 80, 180);
+     // Completaremos esto mas adelante
+    </script>
+</body>
+</html>

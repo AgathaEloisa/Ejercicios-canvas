@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persona en Canvas</title>
+</head>
+<body>
+
+    <canvas id="person" width="400" height="400"></canvas>
+
+    <script>
+        let person = document.getElementById('person');
+        let ctx = person.getContext('2d');
+            // Cabeza
+        ctx.fillStyle = "red";
+        ctx.fillRect(175, 20, 50, 50);
+            // Cuello
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(194, 70, 12, 12);
+            // Torzo
+        ctx.fillStyle = "red";
+        ctx.fillRect(150, 82, 100, 100);
+            // brazos
+        ctx.fillStyle = "red";
+        ctx.fillRect(100, 82, 50, 20);
+        ctx.fillRect(250, 82, 50, 20);
+            //Piernas
+        ctx.fillStyle = "blue";
+        ctx.fillRect(150, 172, 15, 70);
+        ctx.fillRect(235, 172, 15, 70);
+    </script>
+    
+</body>
+</html>
