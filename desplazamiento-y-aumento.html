@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        canvas { border: 1px solid black; }
+      </style>
+    <title>Aumento y desplazamiento</title>
+</head>
+<body>
+    <canvas id="canvas" width="300" height="300"></canvas>
+  
+    <script>
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+
+        // ctx.stroke();
+
+
+        ctx.lineWidth = 2;
+        ctx.fillStyle = 'purple';
+
+        let move = 0;
+        // let grow = 0;
+        setInterval( function () {
+            // Triangulo.
+            ctx.beginPath();
+            ctx.moveTo(move, 130);
+            ctx.lineTo(move, 170);
+            ctx.lineTo(move+40, 150);
+            ctx.closePath();
+            ctx.fill();
+
+            move++;
+
+            ctx.clearRect(0, 128, move, 45);
+
+            if(move > 300) {
+                    move = 0;
+                }
+        }, 30);
+    </script>
+</body>
+</html>
