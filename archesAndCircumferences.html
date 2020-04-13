@@ -13,21 +13,26 @@
         let canvas = document.getElementById('canvas');
         let ctx = canvas.getContext('2d');
  
+        // Grosor de la linea.
+        ctx.lineWidth = 2;
+
         /* arc(x, y, radius, startAngle, endAngle, anticlockwise)
         Dibuja un arco. */
-
         
         // Un cuarto de circulo
+        ctx.strokeStyle = 'lime';
         ctx.beginPath();
-        ctx.arc(75,75,30,0,Math.PI*1/2,false);
+        ctx.arc(75,75,30,0,Math.PI/2,false);
         ctx.stroke();
 
         // Circulo medio circulo bajo.
+        ctx.strokeStyle = 'purple';
         ctx.beginPath();
-        ctx.arc(150,75,30,0,Math.PI*1,false);
+        ctx.arc(150,75,30,0,Math.PI,false);
         ctx.stroke();
 
         // Circulo completo
+        ctx.strokeStyle = 'pink';
         ctx.beginPath();
         ctx.arc(225,75,30,0,Math.PI*2,true);
         ctx.stroke();
