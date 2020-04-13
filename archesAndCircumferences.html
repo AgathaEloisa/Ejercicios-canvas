@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arches and circunferences</title>
+</head>
+<body>
+    <h1>It works</h1>
+    <canvas id="canvas" width="400" height="200"></canvas>
+
+    <script>
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+ 
+        /* arc(x, y, radius, startAngle, endAngle, anticlockwise)
+        Dibuja un arco. */
+
+        
+        // Un cuarto de circulo
+        ctx.beginPath();
+        ctx.arc(75,75,30,0,Math.PI*1/2,false);
+        ctx.stroke();
+
+        // Circulo medio circulo bajo.
+        ctx.beginPath();
+        ctx.arc(150,75,30,0,Math.PI*1,false);
+        ctx.stroke();
+
+        // Circulo completo
+        ctx.beginPath();
+        ctx.arc(225,75,30,0,Math.PI*2,true);
+        ctx.stroke();
+    </script>
+    
+</body>
+</html>
